@@ -1,12 +1,18 @@
 # 使用 SOFAStack 快速构建微服务
 
 ## 前置条件
-注意：您需要自行部署后端环境依赖，并修改示例中的服务依赖地址即可使用。
+注意：本实例为Fork官方示例，修复原示例中未修正的配置错误，并替换配置中心为Nacos。您需要自行部署后端环境依赖，并修改示例中的服务依赖地址即可使用。保留原官网的示例中需要自己动手修改的部分,仅填坑。
 
-- [必选]部署注册中心：https://www.sofastack.tech/projects/sofa-registry/server-quick-start/
-- [必须]部署数据库：本地自行搭建数据库，然后导入 [DDL.sql](https://github.com/sofastack-guides/kc-sofastack-demo/blob/master/DDL.sql)
+- [必选]部署Nacos注册中心：https://nacos.io/zh-cn/docs/quick-start.html
+- [必须]部署数据库：本地自行搭建数据库，然后导入 [DDL.sql](https://github.com/yuhanwen2013/kc-sofastack-demo/blob/master/DDL.sql)
+- [必须]MYSQL 8 配置修改：导入 [Config.sql](https://github.com/yuhanwen2013/kc-sofastack-demo/blob/master/Config.sql)
 - [可选]部署LookoutServer：https://www.sofastack.tech/projects/sofa-lookout/quick-start-metrics-server/
 - [可选]部署Zipkin：https://zipkin.io/pages/quickstart.html
+
+## 备注
+
+如果您在使用mysql 8.x 版本，且并未对mysql进行任何配置操作的话，运行官网示例会出现 mysql 8 sql_mode=only_full_group_by 问题，需要导入config.sql解决该问题。
+
 
 ## 实验内容
 
