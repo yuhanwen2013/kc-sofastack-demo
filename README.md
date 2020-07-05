@@ -86,7 +86,7 @@ stock-mng 工程直接将依赖引入 stock-mng/pom.xml 文件：
 将如下配置复制到 balance-mng 和 stock-mng 工程模块的 application.properties 中。
 ```properties
 # 1、添加服务注册中心地址
-com.alipay.sofa.rpc.registry.address=sofa://localhost:9603
+com.alipay.sofa.rpc.registry-address=nacos://localhost:8848
 # 2、添加 tracer 数据上报的服务端 zipkin 地址
 # 如果上面前置条件未搭建 tracer，可以不配置
 com.alipay.sofa.tracer.zipkin.base-url=http://localhost:9411
